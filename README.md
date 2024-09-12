@@ -1,2 +1,2 @@
-# MATLAB_CompBio
-MATLAB Scripts for Various Computational Biology Tasks
+# Python_CompBio
+Python Scripts for Various Computational Biology Tasks
