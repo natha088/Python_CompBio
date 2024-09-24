@@ -5,8 +5,8 @@ import numpy
 import math
 from MDAnalysis.analysis.waterdynamics import HydrogenBondLifetimes as HBL
 
-u = MDAnalysis.Universe('6pes_wb.psf', '6pes_100.dcd')
-r = list(u.residues.resids[0:64])
+u = MDAnalysis.Universe('structure.psf', 'structure.dcd')
+r = list(u.residues.resids[0:100])
 time = 0
 for x in r:
         selection1 = "byres name OH2 and sphzone 5.0 protein and resid " + str(x)
@@ -16,4 +16,5 @@ for x in r:
         for HBLc, HBLi in HBL_analysis.timeseries:
     	    print("{time} {HBLc}".format(time=time, HBLc=HBLc))
     	    time += 1
+
 
